@@ -6,3 +6,19 @@
   --color-amazonclone-yellow: #FEBD69;
   --color-amazonclone: #131921;
 }
+
+@layer utilities {
+  .animate-slideIn{
+    animation: slideIn 0.3s ease-out forward;
+  }
+
+  @keyframes slideIn{
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+    
+  }
+}
