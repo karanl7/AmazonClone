@@ -1,9 +1,14 @@
+import React from 'react';
 import { Carousel, HomePageCard, CarouselCategory, CarouselProduct } from './';
+import { useState } from 'react';
 
-const HomePage = () => {
+const HomePage = ({addToCart}) => {
+
+  const [cartItems, setCartItems] = useState([]);
+
   return (
     <div className="bg-amazonclone-background">
-      <div className="min-w-[1000px] max-w-[1500px] m-auto ">
+      <div className="min-w-[1000px] max-w-[1500px] m-auto pt-[95px]">
           <Carousel/> 
           <div className="grid grid-cols-3 xl:grid-cols-4 -mt-80"> 
             <HomePageCard title={"We have a surprise for you"}
@@ -35,7 +40,7 @@ const HomePage = () => {
             </div>
 
           </div>
-          <CarouselProduct/>  
+          <CarouselProduct addToCart={addToCart} />  
           <CarouselCategory/>
           <div className='h-[200px]'>
             <img className="h-[100%] m-auto" src='/images/banner_image.jpg'/>

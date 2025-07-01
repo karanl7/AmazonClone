@@ -1,12 +1,15 @@
 import {ShoppingCartIcon} from '@heroicons/react/24/outline';
 import { Search } from './';
-import { SidePanel } from './';
+import { SidePanel, CartPanel } from './';
 import { useState } from 'react';
 
-const NavBar = () => {
+const NavBar = ({cartItems, removeFromCart}) => {
+    
     const[openPanel, setOpenPanel]= useState(false);
+    const [showCart, setShowCart] = useState(false);
+
   return (
-    <header className='min-w-[1000px]'>
+    <header className='min-w-[1000px] fixed top-0 left-0 w-full z-50 bg-amazonclone'>
         <div className="flex bg-amazonclone text-white h-[60px] ">
             {/* Left */}
             <div className="flex items-center m-4">
@@ -30,12 +33,12 @@ const NavBar = () => {
                     <div className="text-xs xl:text-sm">Returns</div>
                     <div className="text-sm xl:text-base font-bold">& Orders</div>
                 </div>
-                <div className="flex pr-3 pl-3">
-                    <ShoppingCartIcon className="h-[45px]"/>
-                    <div className="mt-7 text-xs xl:text-sm font-bold">
-                        Cart
-                    </div>
-                </div>
+                <button className="flex items-center gap-1 bg-yellow-400 text-black font-bold px-3 py-1 rounded hover:bg-yellow-500"
+                        onClick={() => setShowCart(true)}
+                >
+                    <ShoppingCartIcon className="h-[24px]"/>
+                    Cart ({cartItems.length})
+                </button>
 
             </div>
 
@@ -50,7 +53,15 @@ const NavBar = () => {
             <div>Gift Cards</div>
             <div>Sell </div>
         </div>
+        {openPanel && <SidePanel onClose={() => setOpenPanel(false)} />}
         {openPanel && <SidePanel onClose={()=> setOpenPanel(false)}/>}
+            {showCart && (
+                <CartPanel
+                    cartItems={cartItems}
+                    onClose={() => setShowCart(false)}
+                    onRemove={removeFromCart}
+                />
+                )}
     </header>
   )
 };
