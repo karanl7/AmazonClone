@@ -34,7 +34,7 @@ const CarouselProduct = () => {
         </div>
         <div className="bg-white m-3">
             <div className="text-2xl font-semibold p-3">
-                Up to 30% off 
+                Electronics & Accessories
             </div>
             <Swiper
                 slidesPerView={7}
