@@ -10,3 +10,4 @@ export {default as SearchResults} from "./SearchResults";
 export {default as Checkout} from "./Checkout";
 export {default as SidePanel} from "./SidePanel";
 export {default as CartPanel} from "./CartPanel";
+export {default as LoginPage} from "./LoginPage";

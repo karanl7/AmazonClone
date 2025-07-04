@@ -1,9 +1,10 @@
 import {ShoppingCartIcon} from '@heroicons/react/24/outline';
 import { Search } from './';
-import { SidePanel, CartPanel } from './';
+import { SidePanel, CartPanel, LoginPage } from './';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const NavBar = ({cartItems, removeFromCart}) => {
+const NavBar = ({cartItems, removeFromCart,}) => {
     
     const[openPanel, setOpenPanel]= useState(false);
     const [showCart, setShowCart] = useState(false);
@@ -13,7 +14,9 @@ const NavBar = ({cartItems, removeFromCart}) => {
         <div className="flex bg-amazonclone text-white h-[60px] ">
             {/* Left */}
             <div className="flex items-center m-4">
+                <Link to={"/"}>
                 <img className="h-[35px] w-[100 px] m-2" src='/images/amazon.png'/>
+                </Link>
                 <div className="pr-4 pl-2">
                     <div className="text-xs xl:text-sm">Deliver to</div>
                     <div className="text-sm xl:text-base font-bold">India</div>
@@ -26,7 +29,8 @@ const NavBar = ({cartItems, removeFromCart}) => {
             {/* Right */}
             <div className="flex items-center m-4">
                 <div className="pr-4 pl-2">
-                    <div className="text-xs xl:text-sm">Hello, Sign in</div>
+                    <Link to={`/login`} className="text-xs xl:text-sm text-white hover:underline font-bold">
+                    Hello, Sign in</Link>
                     <div className="text-sm xl:text-base font-bold">Accounts & Lists</div>
                 </div>
                 <div className="pr-4 pl-2">

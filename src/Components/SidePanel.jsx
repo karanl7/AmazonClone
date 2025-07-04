@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
 const SidePanel = ({onClose}) => {
 
@@ -23,9 +24,9 @@ const SidePanel = ({onClose}) => {
         className="fixed inset-0  bg-opacity-50 z-40 flex">
         <div className="w-[300px] bg-amazonclone-background h-full shadow-md animate-slideIn p-4">
             <div className="flex justify-between items-center border-b pb-3">
-                <h2 className="font-bold text-lg text-amazonclone">
+                <Link to={"/login"} className="font-bold text-lg text-amazonclone">
                 👤 Hello, Sign in
-                </h2>
+                </Link>
                     <button onClick={onClose} className="text-2xl text-gray-600 hover:text-black">
                         x
                     </button>
@@ -50,7 +51,9 @@ const SidePanel = ({onClose}) => {
                 <ul className="p-2">
                     <li className="p-2">Your Account</li>
                     <li className="p-2">Customer Service</li>
-                    <li className="p-2">Sign in</li>
+                    <li>
+                    <Link to={"/login"} className="p-2">Sign in</Link>
+                    </li>
                 </ul>
             </div>
 
