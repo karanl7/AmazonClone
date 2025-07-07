@@ -11,7 +11,6 @@ const CarouselCategory = () => {
         </div>
         <Swiper
             loop={true}
-            loopedSlides={5}
             slidesPerView={5}
             spaceBetween={10}
             navigation={true}
