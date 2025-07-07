@@ -21,8 +21,8 @@ const SidePanel = ({onClose}) => {
 
     <div 
         id='overlay'
-        className="fixed inset-0  bg-opacity-50 z-40 flex">
-        <div className="w-[300px] bg-amazonclone-background h-full shadow-md animate-slideIn p-4">
+        className="fixed inset-0 bg-black bg-opacity-50 z-40 flex">
+        <div className="w-[280px] md:w-[300px] bg-amazonclone-background h-full shadow-md animate-slideIn p-4">
             <div className="flex justify-between items-center border-b pb-3">
                 <Link to={"/login"} className="font-bold text-lg text-amazonclone">
                 👤 Hello, Sign in
