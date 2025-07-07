@@ -3,7 +3,7 @@ import React from 'react'
 const CartPanel = ({ cartItems, onClose, onRemove }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-40 flex justify-end">
-      <div className="w-[300px] bg-white h-full shadow-md p-4 animate-slideInRight">
+      <div className="w-[280px] md:w-[300px] bg-white h-full shadow-md p-4 animate-slideInRight">
         <div className="flex justify-between items-center border-b pb-3">
           <h2 className="font-bold text-lg">Your Cart</h2>
           <button onClick={onClose} className="text-2xl text-gray-600 hover:text-black">×</button>

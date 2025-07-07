@@ -8,9 +8,9 @@ const HomePage = ({addToCart}) => {
 
   return (
     <div className="bg-amazonclone-background">
-      <div className="min-w-[1000px] max-w-[1500px] m-auto pt-[95px]">
+      <div className="max-w-[1500px] m-auto pt-[95px] px-2 md:px-0">
           <Carousel/> 
-          <div className="grid grid-cols-3 xl:grid-cols-4 -mt-80"> 
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 -mt-40 md:-mt-80"> 
             <HomePageCard title={"We have a surprise for you"}
               img={"../images/home_grid_1.jpg"}
               link={"See terms and Conditions"}/>
@@ -35,7 +35,7 @@ const HomePage = ({addToCart}) => {
             <HomePageCard title={"Family Plan: 3 months free"}
               img={"../images/home_grid_8.jpg"}
               link={"Learn more"}/>  
-            <div className="m-3 pt-8">
+            <div className="m-3 pt-8 col-span-1 sm:col-span-2 md:col-span-3 xl:col-span-1">
               <img className="xl:hidden " src={"/images/banner_image_2.jpg"}/>
             </div>
 

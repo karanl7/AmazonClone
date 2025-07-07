@@ -24,7 +24,26 @@ const CarouselProduct = ({addToCart}) => {
     <div>
       <div className="bg-white m-3">
         <div className="text-2xl font-semibold p-3">BestSeller Books</div>
-        <Swiper slidesPerView={7} spaceBetween={10} navigation modules={[Navigation]}>
+        <Swiper 
+          slidesPerView={2}
+          spaceBetween={10} 
+          navigation 
+          modules={[Navigation]}
+          breakpoints={{
+            640: {
+              slidesPerView: 3,
+            },
+            768: {
+              slidesPerView: 4,
+            },
+            1024: {
+              slidesPerView: 5,
+            },
+            1280: {
+              slidesPerView: 7,
+            },
+          }}
+        >
           {bookProducts.map((product) => (
             <SwiperSlide key={product.id} className="flex flex-col items-center space-y-2">
               <Link to={`/product/${product.id}`}>
@@ -33,7 +52,7 @@ const CarouselProduct = ({addToCart}) => {
               <p className="text-sm text-center">{product.name}</p>
               <button
                 onClick={() => addToCart(product)}
-                className="bg-yellow-400 hover:bg-yellow-500 text-sm text-black px-3 py-1 rounded"
+                className="bg-yellow-400 hover:bg-yellow-500 text-xs md:text-sm text-black px-2 md:px-3 py-1 rounded"
               >
                 + Add to Cart
               </button>
@@ -44,7 +63,26 @@ const CarouselProduct = ({addToCart}) => {
 
       <div className="bg-white m-3">
         <div className="text-2xl font-semibold p-3">Electronics & Accessories</div>
-        <Swiper slidesPerView={7} spaceBetween={10} navigation modules={[Navigation]}>
+        <Swiper 
+          slidesPerView={2}
+          spaceBetween={10} 
+          navigation 
+          modules={[Navigation]}
+          breakpoints={{
+            640: {
+              slidesPerView: 3,
+            },
+            768: {
+              slidesPerView: 4,
+            },
+            1024: {
+              slidesPerView: 5,
+            },
+            1280: {
+              slidesPerView: 7,
+            },
+          }}
+        >
           {electronics.map((product) => (
             <SwiperSlide key={product.id} className="flex flex-col items-center space-y-2">
               <Link to={`/product/${product.id}`}>
@@ -53,7 +91,7 @@ const CarouselProduct = ({addToCart}) => {
               <p className="text-sm text-center">{product.name}</p>
               <button 
                 onClick={() => addToCart(product)}
-                className="bg-yellow-400 hover:bg-yellow-500 text-sm text-black px-3 py-1 rounded"
+                className="bg-yellow-400 hover:bg-yellow-500 text-xs md:text-sm text-black px-2 md:px-3 py-1 rounded"
               >
                 + Add to Cart
               </button>
