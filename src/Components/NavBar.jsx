@@ -1,6 +1,6 @@
 import {ShoppingCartIcon} from '@heroicons/react/24/outline';
 import { Search } from './';
-import { SidePanel, CartPanel, LoginPage } from './';
+import { SidePanel, CartPanel, } from './';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 

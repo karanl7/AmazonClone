@@ -45,7 +45,7 @@ const CarouselProduct = ({addToCart}) => {
           }}
         >
           {bookProducts.map((product) => (
-            <SwiperSlide key={product.id} className="flex flex-col items-center space-y-2">
+            <SwiperSlide key={product.id} className="flex flex-col items-center space-y-2 text-center p-2">
               <Link to={`/product/${product.id}`}>
                 <img src={product.img} alt={product.name} className="w-full max-h-[120px] object-contain"/>
               </Link>
@@ -84,7 +84,7 @@ const CarouselProduct = ({addToCart}) => {
           }}
         >
           {electronics.map((product) => (
-            <SwiperSlide key={product.id} className="flex flex-col items-center space-y-2">
+            <SwiperSlide key={product.id} className="flex flex-col items-center space-y-2 text-center p-2">
               <Link to={`/product/${product.id}`}>
                 <img src={product.img} alt={product.name} className="w-full max-h-[120px] object-contain"/>
               </Link>
