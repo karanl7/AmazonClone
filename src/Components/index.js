@@ -11,3 +11,4 @@ export {default as Checkout} from "./Checkout";
 export {default as SidePanel} from "./SidePanel";
 export {default as CartPanel} from "./CartPanel";
 export {default as LoginPage} from "./LoginPage";
+export {default as QuickView} from "./QuickView";
